@@ -5,15 +5,17 @@
     height: 600px;
     margin: auto;
     background-color: var(--dark-gray);
+    overflow-y: scroll;
+    overflow-x: hidden;
 
     .inputs {
       color: white;
       display: flex;
       font-size: 1.6rem;
       padding: 1rem;
-      border-bottom: 1px solid rgb(53, 51, 51);
+      border-bottom: 1px solid var(--border);
 
-      .btn {
+      .btn-primary {
         padding: 0 2rem;
         margin: 0 auto;
 
@@ -26,7 +28,7 @@
         transition: box-shadow 0.2s ease;
         cursor: pointer;
       }
-      .btn:hover {
+      .btn-primary:hover {
         box-shadow: 2px 2px 15px var(--green) inset;
       }
 
@@ -51,6 +53,61 @@
 
       .input:hover {
         box-shadow: 2px 2px 15px var(--green) inset;
+      }
+    }
+    .table {
+      table {
+        border: 1px solid var(--border);
+        border-collapse: collapse;
+        margin: auto;
+        overflow-x: scroll;
+        min-width: 90%;
+        max-width: 98%;
+
+        tr {
+          th {
+            border: 1px solid var(--border);
+            padding: 1rem;
+            text-align: center;
+
+            color: white;
+          }
+
+          td {
+            border: 1px solid var(--border);
+            padding: 1rem;
+            text-align: center;
+
+            color: gray;
+
+            .btn {
+              padding: 0.4rem 1rem;
+              margin: 0 auto;
+
+              color: white;
+              background-color: transparent;
+
+              border-radius: 6px;
+
+              transition: box-shadow 0.2s ease;
+              cursor: pointer;
+
+              &.del {
+                border: 1px solid red;
+              }
+
+              &.att {
+                border: 1px solid rgb(0, 195, 255);
+              }
+            }
+            .btn.del:hover {
+              box-shadow: 2px 2px 15px red inset;
+            }
+            .btn.att:hover {
+              box-shadow: 2px 2px 15px rgb(0, 195, 255) inset;
+            }
+          }
+        }
       }
     }
   }
