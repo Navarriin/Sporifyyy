@@ -5,11 +5,13 @@
 }
 
 :root {
-  --dark-gray: #3c363b;
+  --dark-gray: rgb(18, 18, 18);
+  --light-gray: #3c363b;
+  --green: rgb(16, 206, 16);
 }
 
 body {
-  background: var(--dark-gray);
+  background: var(--light-gray);
 
   font-family: "Segoe UI", sans-serif;
 }
