@@ -1,7 +1,7 @@
 <div class="content">
     <div class="inputs">
         <label class="label" for=""><span>#</span>Autor:</label>
-        <input type="text" name="text" class="input" placeholder="Digite o autor aqui...">
+        <input type="text" name="text" class="input" placeholder="Digite o autor aqui... ">
         <label class="label" for="">Musica:</label>
         <input type="text" name="text" class="input" placeholder="Digite a musica aqui...">
         <button class="btn-primary">Enviar</button>
@@ -16,23 +16,13 @@
                 <th>---------</th>
             </tr>
 
-            <tr>
-                <td>1</td>
-                <td>Nivernava</td>
-                <td>Never to die</td>
+            <tr *ngFor="let music of musics$ | async">
+                <td>{{ music.id }}</td>
+                <td>{{ music.author }}</td>
+                <td>{{ music.nameMusic }}</td>
                 <td><button class="btn att">Atualizar</button></td>
                 <td><button class="btn del">Deletar</button></td>
             </tr>
-
-            <tr>
-                <td>2</td>
-                <td>AC/DC</td>
-                <td>Hight to hell</td>
-                <td><button class="btn att">Atualizar</button></td>
-                <td><button class="btn del">Deletar</button></td>
-            </tr>
-
-
 
         </table>
     </div>
