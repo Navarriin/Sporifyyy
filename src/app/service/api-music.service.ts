@@ -13,4 +13,8 @@ export class ApiMusicService {
   getAllMusics(): Observable<Musics[]> {
     return this.http.get<Musics[]>(`${this.url}/musics`);
   }
+
+  postMusic(music: Musics) {
+    return this.http.post<Musics>(`${this.url}/musics`, music);
+  }
 }

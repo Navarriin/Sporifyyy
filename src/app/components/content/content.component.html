@@ -1,10 +1,10 @@
 <div class="content">
     <div class="inputs">
         <label class="label" for=""><span>#</span>Autor:</label>
-        <input type="text" name="text" class="input" placeholder="Digite o autor aqui... ">
+        <input type="text" [(ngModel)]="author" name="author" class="input" placeholder="Digite o autor aqui... ">
         <label class="label" for="">Musica:</label>
-        <input type="text" name="text" class="input" placeholder="Digite a musica aqui...">
-        <button class="btn-primary">Enviar</button>
+        <input type="text" [(ngModel)]="music" name="music" class="input" placeholder="Digite a musica aqui...">
+        <button class="btn-primary" (click)="registerMusic()">Enviar</button>
     </div>
     <div class="table">
         <table>
