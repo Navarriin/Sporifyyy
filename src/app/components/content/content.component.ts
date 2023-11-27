@@ -18,6 +18,8 @@ export class ContentComponent {
   protected author: string = '';
   protected music: string = '';
 
+  protected button: string = 'Enviar';
+
   constructor(private apiMusic: ApiMusicService) {}
 
   ngOnInit(): void {
@@ -26,13 +28,34 @@ export class ContentComponent {
 
   getAllMusics(): void {
     this.musics$ = this.apiMusic.getAllMusics();
+
+    this.button = 'Enviar';
+    this.author = '';
+    this.music = '';
   }
 
   registerMusic(): void {
     if (!this.music || !this.author) return;
 
+    if (this.button === 'Salvar') {
+      this.updateMusic();
+      return;
+    }
+
     this.apiMusic
       .postMusic({ author: this.author, nameMusic: this.music })
       .subscribe(() => this.getAllMusics());
+  }
+
+  updateMusic(): void {
+    this.apiMusic
+      .updateMusic({ author: this.author, nameMusic: this.music })
+      .subscribe(() => this.getAllMusics());
+  }
+
+  fillFields(music: Musics): void {
+    this.button = 'Salvar';
+    this.author = music.author;
+    this.music = music.nameMusic;
   }
 }

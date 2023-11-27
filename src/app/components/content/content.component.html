@@ -4,7 +4,7 @@
         <input type="text" [(ngModel)]="author" name="author" class="input" placeholder="Digite o autor aqui... ">
         <label class="label" for="">Musica:</label>
         <input type="text" [(ngModel)]="music" name="music" class="input" placeholder="Digite a musica aqui...">
-        <button class="btn-primary" (click)="registerMusic()">Enviar</button>
+        <button class="btn-primary" (click)="registerMusic()">{{ button }}</button>
     </div>
     <div class="table">
         <table>
@@ -20,7 +20,7 @@
                 <td>{{ music.id }}</td>
                 <td>{{ music.author }}</td>
                 <td>{{ music.nameMusic }}</td>
-                <td><button class="btn att">Atualizar</button></td>
+                <td><button class="btn att" (click)="fillFields(music)">Atualizar</button></td>
                 <td><button class="btn del">Deletar</button></td>
             </tr>
 

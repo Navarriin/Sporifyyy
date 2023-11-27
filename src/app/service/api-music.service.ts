@@ -7,14 +7,18 @@ import { Musics } from '../models/musics.models';
   providedIn: 'root',
 })
 export class ApiMusicService {
-  private url: string = 'http://localhost:8080';
+  private url: string = 'http://localhost:8080/musics';
   constructor(private http: HttpClient) {}
 
   getAllMusics(): Observable<Musics[]> {
-    return this.http.get<Musics[]>(`${this.url}/musics`);
+    return this.http.get<Musics[]>(this.url);
   }
 
-  postMusic(music: Musics) {
-    return this.http.post<Musics>(`${this.url}/musics`, music);
+  postMusic(music: Musics): Observable<Musics> {
+    return this.http.post<Musics>(this.url, music);
+  }
+
+  updateMusic(music: Musics): Observable<Musics> {
+    return this.http.put<Musics>(`${this.url}/${music.id}`, music);
   }
 }
