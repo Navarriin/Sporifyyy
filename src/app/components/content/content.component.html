@@ -21,7 +21,7 @@
                 <td>{{ music.author }}</td>
                 <td>{{ music.nameMusic }}</td>
                 <td><button class="btn att" (click)="fillFields(music)">Atualizar</button></td>
-                <td><button class="btn del">Deletar</button></td>
+                <td><button class="btn del" (click)="deleteMusic(music.id!)">Deletar</button></td>
             </tr>
 
         </table>

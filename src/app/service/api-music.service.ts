@@ -21,4 +21,8 @@ export class ApiMusicService {
   updateMusic(music: Musics): Observable<Musics> {
     return this.http.put<Musics>(`${this.url}/${music.id}`, music);
   }
+
+  deleteMusic(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${id}`);
+  }
 }

@@ -15,6 +15,7 @@ import { ApiMusicService } from '../../service/api-music.service';
 export class ContentComponent {
   protected musics$ = new Observable<Musics[]>();
 
+  protected id: number = 0;
   protected author: string = '';
   protected music: string = '';
 
@@ -49,7 +50,7 @@ export class ContentComponent {
 
   updateMusic(): void {
     this.apiMusic
-      .updateMusic({ author: this.author, nameMusic: this.music })
+      .updateMusic({ id: this.id, author: this.author, nameMusic: this.music })
       .subscribe(() => this.getAllMusics());
   }
 
@@ -57,5 +58,10 @@ export class ContentComponent {
     this.button = 'Salvar';
     this.author = music.author;
     this.music = music.nameMusic;
+    this.id = music.id!;
+  }
+
+  deleteMusic(id: number): void {
+    this.apiMusic.deleteMusic(id).subscribe(() => this.getAllMusics());
   }
 }
