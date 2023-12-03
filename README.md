@@ -7,6 +7,11 @@
 ## :smile: Descrição
 Projeto criado com o intuito de praticar e melhorar, utilizando uma API que eu mesmo criei em Java. Um CRUD completo com os 4 principais métodos (GET, POST, PUT e DELETE), onde você consegue adicionar músicas em uma lista, atualizá-las ou até mesmo deletá-las.
 
+### Segue o Link do repositorio da API    
+https://github.com/Navarriin/API_spotfy   
+
+#### OBS: subir a API na porta -> http://localhost:8080/
+
 ## :pushpin: Como utilizar 
 ### 1. Clone o repositório
 ```
@@ -22,4 +27,4 @@ npm install
 ng serve
 ```
 
-Após realizar esta sequência de passos a aplicação já estará pronta para ser utilizada na porta:  http://localhost:4200/
+Após realizar esta sequência de passos a aplicação já estará pronta para ser utilizada na porta -> http://localhost:4200/
