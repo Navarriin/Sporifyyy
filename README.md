@@ -1,27 +1,25 @@
-# Spotifyyy
+# :notes: Spotifyyy - Gabriel Navarro
+![Static Badge](https://img.shields.io/badge/TypeScript-green)
+![Static Badge](https://img.shields.io/badge/Angular-green)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.1.
+![Tela do projeto](https://github.com/Navarriin/Sporifyyy/assets/139160874/9358cfdf-3b72-4a61-95db-669c9358d764)
 
-## Development server
+## :smile: Descrição
+Projeto criado com o intuito de praticar e melhorar, utilizando uma API que eu mesmo criei em Java. Um CRUD completo com os 4 principais métodos (GET, POST, PUT e DELETE), onde você consegue adicionar músicas em uma lista, atualizá-las ou até mesmo deletá-las.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## :pushpin: Como utilizar 
+### 1. Clone o repositório
+```
+git clone https://github.com/Navarriin/Sporifyyy.git 
+```
+### 2. Instale as dependencias
+```
+npm install
+```
 
-## Code scaffolding
+### 3. Starte a aplicação
+```
+ng serve
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Após realizar esta sequência de passos a aplicação já estará pronta para ser utilizada na porta:  http://localhost:4200/
